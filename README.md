@@ -48,6 +48,7 @@ print(s) // This is a string with <span class="typographizerDebug">“</span>dum
 - [x] Fixes single quotes: `''` → `‘’` (localized)
 - [x] Fixes apostrophes: `'` → `’`
 - [x] Fixes hyphens that are used as en dashes: `… - …` → `… – …`
+
 ## Supported Languages
 
 | Language Code | Double Quotes | Single Quotes | Comment |
