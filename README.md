@@ -10,7 +10,7 @@ Written in Swift 3, it’s been tested on macOS, iOS, and watchOS.
 
 Put the `.swift` files into your app’s Xcode project.
 
-## How to use
+## How To Use
 
 The easiest way to use Typographizer is the String extension (`String+Typographizer.swift`):
 
@@ -42,7 +42,13 @@ s = s.typographized(language: "en", isHTML: true, debug: true)
 print(s) // This is a string with <span class="typographizerDebug">“</span>dumb<span class="typographizerDebug">”</span> quotes.
 ```
 
-## Supported languages
+## Features
+
+- [x] Fixes double quotes: `""` → `“”` (localized)
+- [x] Fixes single quotes: `''` → `‘’` (localized)
+- [x] Fixes apostrophes: `'` → `’`
+- [x] Fixes hyphens that are used as en dashes: `… - …` → `… – …`
+## Supported Languages
 
 | Language Code | Double Quotes | Single Quotes | Comment |
 | --- | --- | --- | --- |
@@ -73,25 +79,21 @@ print(s) // This is a string with <span class="typographizerDebug">“</span>dum
 
 ## To Do
 
-- Add a demo app project for macOS
-- Build a Swift Framework project (or maybe this is overkill?)
-- Add Carthage/CocoaPods support (or maybe this is overkill?)
-- Analyze HTML tags to verify correct quotes (opening and closing `<p>` tags make a good indicator for opening and closing quotation marks)
-- Add special cases like ’80s, ’Twas, Rock ’n’ Roll, etc.
-- Add support for Hebrew and Swiss German
-- If there is only one dumb single quote in a string, it’s definitely an apostrophe
-- If the isHTML flag is not explicitly set, we could still check automatically whether the string contains any HTML tags
-- Add more typographic refinements
-
----
+- [ ] Add a demo app project for macOS
+- [ ] Build a Swift Framework project (or maybe this is overkill?)
+- [ ] Add Carthage/CocoaPods support (or maybe this is overkill?)
+- [ ] Analyze HTML tags to verify correct quotes (opening and closing `<p>` tags make a good indicator for opening and closing quotation marks)
+- [ ] Add special cases like ’80s, ’Twas, Rock ’n’ Roll, etc.
+- [ ] Add support for Hebrew and Swiss German
+- [ ] If there is only one dumb single quote in a string, it’s definitely an apostrophe
+- [ ] If the isHTML flag is not explicitly set, we could still check automatically whether the string contains any HTML tags
+- [ ] Add more typographic refinements (e.g. prime symbols, thin spaces)
 
 ## Credits
 
 Typographizer was created by [Frank Rausch](http://frankrausch.com) ([@frankrausch](https://twitter.com/frankrausch)).
 
 Thanks to Tony Allevato for the great article on [Strings, characters, and performance in Swift—a deep dive](https://medium.com/@tonyallevato/strings-characters-and-performance-in-swift-a-deep-dive-b7b5bde58d53).
-
----
 
 ## License
 Swift Typographizer is released under the MIT License. Please view the LICENSE file for details.
