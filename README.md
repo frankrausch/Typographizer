@@ -22,7 +22,9 @@ s = s.typographized(language: "en")
 print(s) // This is a string with “dumb” quotes.
 ```
 
-If your strings may contain any HTML, set the `isHTML` parameter to `true`:
+### Ignoring HTML Tags
+
+If your strings may contain any HTML, set the `isHTML` parameter to `true`. Typographizer will then ignore the quotes inside tags and anything between `<pre>`, `<code>`, `<var>`, `<samp>`, `<kbd>`, `<math>`, `<script>`, and `<style>` tags:
 
 ```swift
 var s = "This is a \"string\" with HTML. <code class="">print(\"hello world\")</code>"
@@ -31,6 +33,8 @@ s = s.typographized(language: "en", isHTML: true)
 
 print(s) // This is a “string” with HTML. <code class="">print("hello world")</code>
 ```
+
+### Debug Mode
 
 Activate the debug mode to highlight the characters that have been changed—Typographizer will add this tag around them: `<span class="typographizerDebug">` `</span>`
 
