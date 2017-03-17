@@ -160,14 +160,14 @@ struct Typographizer {
                 tokens.append(token)
             }
         } catch {
-            #if DEBUG
                 if self.isDebugModeEnabled {
-                    print("Typographizer iterator triggered an error.")
-                    abort()
+                    #if DEBUG
+                        print("Typographizer iterator triggered an error.")
+                        abort()
+                    #endif
                 } else {
                     return self.text // return unchanged text
                 }
-            #endif
         }
         
         let s = tokens.flatMap({$0.text}).joined()
