@@ -51,11 +51,11 @@ print(s) // This is a string with <span class="typographizer-debug typographizer
 Use CSS to visualize the changes:
 
 ```css
-.typographizer--debug {
+.typographizer-debug {
   font-weight: bold;
 }
 
-.typographizer--debug--apostrophe {
+.typographizer-debug--apostrophe {
 	color: red;
 }
 
