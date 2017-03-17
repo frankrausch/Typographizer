@@ -56,7 +56,7 @@ Use CSS to visualize the changes:
 }
 
 .typographizer-debug--apostrophe {
-	color: red;
+  color: red;
 }
 
 /* … */
