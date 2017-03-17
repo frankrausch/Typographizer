@@ -36,14 +36,44 @@ print(s) // This is a “string” with HTML. <code class="">print("hello world"
 
 ### Debug Mode
 
-Activate the debug mode to highlight the characters that have been changed—Typographizer will add this tag around them: `<span class="typographizerDebug">` `</span>`
+Activate the debug mode to highlight the characters that have been changed—Typographizer will add this tag around them: `<span class="typographizer-debug typographizer-debug--XXX">` `</span>`
 
 ```swift
 var s = "This is a string with \"dumb\" quotes."
 
 s = s.typographized(language: "en", isHTML: true, debug: true)
 
-print(s) // This is a string with <span class="typographizerDebug">“</span>dumb<span class="typographizerDebug">”</span> quotes.
+print(s) // This is a string with <span class="typographizer-debug typographizer-debug--opening-double">“</span>dumb<span class="typographizer-debug typographizer-debug--closing-double">”</span> quotes.
+```
+
+(Yes, the class names are a little wordy, but that’s [on purpose](https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/).)
+
+Use CSS to visualize the changes:
+
+```css
+.typographizer--debug {
+  font-weight: bold;
+}
+
+.typographizer--debug--apostrophe {
+	color: red;
+}
+
+/* … */
+```
+
+### Measuring Performance
+
+Pass `measurePerformance: true` to log performance stats:
+
+```swift
+s = s.typographized(language: "en", isHTML: true, debug: false, measurePerformance: true)
+```
+
+You’ll see something like this in the Xcode console:
+
+```
+Typographizing took 0.00582303 seconds
 ```
 
 ## Features
@@ -52,6 +82,7 @@ print(s) // This is a string with <span class="typographizerDebug">“</span>dum
 - [x] Fixes single quotes: `''` → `‘’` (localized)
 - [x] Fixes apostrophes: `'` → `’`
 - [x] Fixes hyphens that are used as en dashes: `… - …` → `… – …`
+- [x] Demo app project for macOS
 
 ## Supported Languages
 
@@ -84,7 +115,6 @@ print(s) // This is a string with <span class="typographizerDebug">“</span>dum
 
 ## To Do
 
-- [ ] Add a demo app project for macOS
 - [ ] Build a Swift Framework project (or maybe this is overkill?)
 - [ ] Add Carthage/CocoaPods support (or maybe this is overkill?)
 - [ ] Analyze HTML tags to verify correct quotes (opening and closing `<p>` tags make a good indicator for opening and closing quotation marks)
@@ -101,4 +131,4 @@ Typographizer was created by [Frank Rausch](http://frankrausch.com) ([@frankraus
 Thanks to Tony Allevato for the great article on [Strings, characters, and performance in Swift—a deep dive](https://medium.com/@tonyallevato/strings-characters-and-performance-in-swift-a-deep-dive-b7b5bde58d53).
 
 ## License
-Swift Typographizer is released under the MIT License. Please view the LICENSE file for details.
+The Typographizer source code is released under the MIT License. Please view the LICENSE file for details.
