@@ -87,30 +87,29 @@ Typographizing took 0.00582303 seconds
 ## Supported Languages
 
 | Language Code | Double Quotes | Single Quotes | Comment |
-| --- | --- | --- | --- |
-|||
-`bs` | ”” | ’’ | |
-`cs` | „“ | ‚‘ | |
-`da` | „“ | ‚‘ | |
-`de` | „“ | ‚‘ | To do: There should be a `de_CH` option for Swiss German with guillemets («»/‹›)|
-`en` | “” | ‘’ | |
-`et` | „“ | ‚‘ | |
-`fi` | ”” | ’’ | |
-`fr` | «`\u{00A0}` `\u{00A0}`» | ‹`\u{00A0}` `\u{00A0}`› | French Quotes are set with a non-breaking space (`\u{00A0}`). A thin non-breaking space would be better, but it’s not supported in most browsers.|
-`hu` | „” | ’’ | |
-`is` | „“ | ‚‘ | |
-`ja` | 「」 | 『』 | |
-`lt` | „“ | ‚‘ | |
-`lv` | „“ | ‚‘ | |
-`nl` | “” | ‘’ | |
-`nn` | «» | ’’ | |
-`no` | «» | ’’ | |
-`pl` | „” | ’’ | |
-`ro` | „” | ’’ | |
-`ru` | «» | ’’ | |
-`sk` | „“ | ‚‘ | |
-`sl` | „“ | ‚‘ | |
-`sv` | ”” | ’’ | |
+| :---: | :---: | :---: | --- |
+| `bs` | ”” | ’’ | |
+| `cs` | „“ | ‚‘ | |
+| `da` | „“ | ‚‘ | |
+| `de` | „“ | ‚‘ | To do: There should be a `de_CH` option for Swiss German with guillemets («»/‹›)|
+| `en` | “” | ‘’ | |
+| `et` | „“ | ‚‘ | |
+| `fi` | ”” | ’’ | |
+| `fr` | «`\u{00A0}` `\u{00A0}`» | ‹`\u{00A0}` `\u{00A0}`› | French Quotes are set with a non-breaking space (`\u{00A0}`). A thin non-breaking space would be better, but it’s not supported in most browsers.|
+| `hu` | „” | ’’ | |
+| `is` | „“ | ‚‘ | |
+| `ja` | 「」 | 『』 | |
+| `lt` | „“ | ‚‘ | |
+| `lv` | „“ | ‚‘ | |
+| `nl` | “” | ‘’ | |
+| `nn` | «» | ’’ | |
+| `no` | «» | ’’ | |
+| `pl` | „” | ’’ | |
+| `ro` | „” | ’’ | |
+| `ru` | «» | ’’ | |
+| `sk` | „“ | ‚‘ | |
+| `sl` | „“ | ‚‘ | |
+| `sv` | ”” | ’’ | |
 
 
 ## To Do
