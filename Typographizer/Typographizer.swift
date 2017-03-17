@@ -52,6 +52,7 @@ struct Typographizer {
     private var previousScalar: UnicodeScalar?
 
     var isDebugModeEnabled = false
+    var isMeasurePerformanceEnabled = false
     var isHTML = false
     
     private var openingDoubleQuote: String = "·"
@@ -64,11 +65,13 @@ struct Typographizer {
     private let tagsToSkip = ["pre", "code", "var", "samp", "kbd", "math", "script", "style"]
     private let openingBracketsArray: [UnicodeScalar] = ["(", "["]
     
-    init(language: String, text: String, isHTML: Bool = false) {
+    init(language: String, text: String, isHTML: Bool = false, debug: Bool = false, measurePerformance: Bool = false) {
         self.text = text
         self.isHTML = isHTML
         self.language = language
-        
+        self.isDebugModeEnabled = debug
+        self.isMeasurePerformanceEnabled = measurePerformance
+
         self.refreshLanguage()
         self.refreshTextIterator()
     }
@@ -145,7 +148,10 @@ struct Typographizer {
     
     mutating func typographize() -> String {
         #if DEBUG
-            let startTime = Date()
+            var startTime: Date?
+            if self.isMeasurePerformanceEnabled {
+                startTime = Date()
+            }
         #endif
         
         var tokens = [TypographizerToken]()
@@ -155,16 +161,22 @@ struct Typographizer {
             }
         } catch {
             #if DEBUG
-                print("Typographizer iterator triggered an error.")
-                abort()
+                if self.isDebugModeEnabled {
+                    print("Typographizer iterator triggered an error.")
+                    abort()
+                } else {
+                    return self.text // return unchanged text
+                }
             #endif
         }
         
         let s = tokens.flatMap({$0.text}).joined()
         
         #if DEBUG
-            let endTime = Date().timeIntervalSince(startTime)
-            print("Typographizing took \(NSString(format:"%.8f", endTime)) seconds")
+            if let startTime = startTime {
+                let endTime = Date().timeIntervalSince(startTime)
+                print("Typographizing took \(NSString(format:"%.8f", endTime)) seconds")
+            }
         #endif
         
         return s

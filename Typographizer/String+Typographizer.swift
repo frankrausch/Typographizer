@@ -9,10 +9,12 @@
 import Foundation
 
 extension String {
-    func typographized(language: String, isHTML: Bool = true, debug: Bool = false) -> String {
+    func typographized(language: String, isHTML: Bool = true, debug: Bool = false, measurePerformance: Bool = false) -> String {
         var t = Typographizer(language: language, text: self)
-        t.isDebugModeEnabled = debug
         t.isHTML = isHTML
+        t.isDebugModeEnabled = debug
+        t.isMeasurePerformanceEnabled = measurePerformance
+        
         return t.typographize()
     }
 }
