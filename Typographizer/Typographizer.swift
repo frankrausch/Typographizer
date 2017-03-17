@@ -10,18 +10,27 @@ import Foundation
 
 struct Typographizer {
 
-    enum TypographizerTokenType {
-        case neutral
-        case fixable
-        case ignorable
+    enum TypographizerTokenResult: String {
+        case openingSingle = "opening-single"
+        case closingSingle = "closing-single"
+        case openingDouble = "opening-double"
+        case closingDouble = "closing-double"
+        case apostrophe = "apostrophe"
+        case enDash = "en-dash"
+        // Unchanged text because it doesn’t contain the trigger characters:
+        case unchanged = "unchanged"
+        // It’s one of the trigger characters but didn’t need changing:
+        case ignored = "ignored"
+        // Was skipped because it was either a tag, or protected text between tags.
+        case skipped = "skipped"
     }
     
     struct TypographizerToken {
-        let type: TypographizerTokenType
+        let result: TypographizerTokenResult
         let text: String
         
-        init(_ type: TypographizerTokenType, _ text: String) {
-            self.type = type
+        init(_ result: TypographizerTokenResult, _ text: String) {
+            self.result = result
             self.text = text
         }
     }
@@ -168,7 +177,7 @@ struct Typographizer {
             case "´",
                  "`":
                 // FIXME: Replacing a combining accent only works for the very first scalar in a string
-                return TypographizerToken(.fixable, "’")
+                return TypographizerToken(.apostrophe, "’")
             case "\"",
                  "'",
                  "-":
@@ -210,7 +219,7 @@ struct Typographizer {
                 tokenText.unicodeScalars.append(ch)
             }
         }
-        return TypographizerToken(.ignorable, tokenText)
+        return TypographizerToken(.skipped, tokenText)
     }
     
     private mutating func fastForwardToClosingTag(_ tag: String) -> String {
@@ -262,7 +271,7 @@ struct Typographizer {
                 tokenText.unicodeScalars.append(ch)
             }
         }
-        return TypographizerToken(.neutral, tokenText)
+        return TypographizerToken(.unchanged, tokenText)
     }
     
     // MARK: Fixable Token (quote, apostrophe, hyphen)
@@ -273,22 +282,31 @@ struct Typographizer {
         let nextScalar = self.nextScalar()
         self.bufferedScalar = nextScalar
         
+        var fixingResult: TypographizerTokenResult = .ignored
+        
         switch first {
         case "\"":
             if let previousScalar = self.previousScalar,
                 let nextScalar = nextScalar {
                 if CharacterSet.whitespacesAndNewlines.contains(previousScalar) || self.openingBracketsArray.contains(previousScalar) {
                     tokenText = self.openingDoubleQuote
+                    fixingResult = .openingDouble
                 } else if CharacterSet.whitespacesAndNewlines.contains(nextScalar) || CharacterSet.punctuationCharacters.contains(nextScalar) {
                     tokenText = self.closingDoubleQuote
+                    fixingResult = .closingDouble
                 } else {
                     tokenText = self.closingDoubleQuote
+                    fixingResult = .closingDouble
                 }
             } else {
                 if previousScalar == nil {
+                    // The last character of a string:
                     tokenText = self.openingDoubleQuote
+                    fixingResult = .openingDouble
                 } else {
+                    // The first character of a string:
                     tokenText = self.closingDoubleQuote
+                    fixingResult = .closingDouble
                 }
             }
             
@@ -300,16 +318,23 @@ struct Typographizer {
                     || CharacterSet.punctuationCharacters.contains(previousScalar) && !CharacterSet.whitespacesAndNewlines.contains(nextScalar)
                 {
                     tokenText = self.openingSingleQuote
+                    fixingResult = .openingSingle
                 } else if CharacterSet.whitespacesAndNewlines.contains(nextScalar) || CharacterSet.punctuationCharacters.contains(nextScalar) {
                     tokenText = self.closingSingleQuote
+                    fixingResult = .closingSingle
                 } else {
                     tokenText = self.apostrophe
+                    fixingResult = .apostrophe
                 }
             } else {
                 if previousScalar == nil {
+                    // The first character of a string:
                     tokenText = self.openingSingleQuote
+                    fixingResult = .openingSingle
                 } else {
+                    // The last character of a string:
                     tokenText = self.closingSingleQuote
+                    fixingResult = .closingSingle
                 }
             }
         case "-":
@@ -319,6 +344,7 @@ struct Typographizer {
                 && CharacterSet.whitespacesAndNewlines.contains(nextScalar)
             {
                 tokenText = self.enDash
+                fixingResult = .enDash
             }
         default: ()
         }
@@ -327,10 +353,10 @@ struct Typographizer {
         
         #if DEBUG
             if self.isDebugModeEnabled && self.isHTML {
-                tokenText = "<span class=\"typographizerDebug\">\(tokenText)</span>"
+                tokenText = "<span class=\"typographizer-debug typographizer-debug--\(fixingResult.rawValue)\">\(tokenText)</span>"
             }
         #endif
-        return TypographizerToken(.fixable, tokenText)
+        return TypographizerToken(fixingResult, tokenText)
     }
     
 }
