@@ -21,7 +21,7 @@ struct Typographizer {
         case unchanged = "unchanged"
         // It’s one of the trigger characters but didn’t need changing:
         case ignored = "ignored"
-        // Was skipped because it was either a tag, or protected text between tags.
+        // Was skipped because it was either an HTML tag, or a pair of tags with protected text in between:
         case skipped = "skipped"
     }
     
@@ -195,9 +195,9 @@ struct Typographizer {
                  "-":
                 return try self.fixableToken(ch)
             case "<" where self.isHTML:
-                return try self.tagToken()
+                return try self.htmlToken()
             default:
-                return try self.stringToken(ch)
+                return try self.unchangedToken(ch)
             }
         }
         return nil
@@ -213,7 +213,7 @@ struct Typographizer {
     
     // MARK: Tag Token
     
-    private mutating func tagToken() throws -> TypographizerToken {
+    private mutating func htmlToken() throws -> TypographizerToken {
         var tokenText = "<"
         var tagName = ""
         loop: while let ch = nextScalar() {
@@ -267,9 +267,9 @@ struct Typographizer {
         return (buffer, buffer.hasPrefix(tag))
     }
     
-    // MARK: String Token
+    // MARK: Unchanged Token
     
-    private mutating func stringToken(_ first: UnicodeScalar) throws -> TypographizerToken {
+    private mutating func unchangedToken(_ first: UnicodeScalar) throws -> TypographizerToken {
         var tokenText = String(first)
         self.previousScalar = first
         
