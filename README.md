@@ -1,16 +1,18 @@
-## Swift Typographizer
+![Typographizer](https://raw.githubusercontent.com/frankrausch/typographizer/master/logo.svg)
 
-Typographizer turns those pesky dumb quotes `""`/`''` and apostrophes into their beautiful, curly, localized counterparts. Because [good typography uses smart quotes, not dumb quotes](http://smartquotesforsmartpeople.com/) and we should not let [the internet kill smart quotes](https://www.theatlantic.com/technology/archive/2016/12/quotation-mark-wars/511766/). Speaking of smartness: Typographizer is smart enough to skip HTML tags and everything that’s inside certain tags (like `<code>` and `<pre>`).
+## Typographizer · Smart Quotes for Swift Apps
 
-Typographizer was initially created to typographize Wikipedia articles in the [V&nbsp;for&nbsp;Wiki](http://v-for-wiki.com/) app, a nice reader for iOS and Apple Watch.
+Typographizer turns those pesky dumb quotes (`""`/`''`) and apostrophes (`'`) into their beautiful, curly, localized counterparts. Because [good typography uses smart quotes, not dumb quotes](http://smartquotesforsmartpeople.com/) and we should not let [the internet kill smart quotes](https://www.theatlantic.com/technology/archive/2016/12/quotation-mark-wars/511766/). Speaking of smartness: Typographizer is smart enough to skip HTML tags and everything between certain tags (like `<code>` and `<pre>`).
 
-Written in Swift 3, it’s been tested on macOS, iOS, and watchOS.
+Typographizer has a small footprint, was written in pure Swift 3, and has been tested on macOS, iOS, watchOS, and tvOS.
+
+I started building Typographizer to typographize Wikipedia articles in my [V&nbsp;for&nbsp;Wiki](http://v-for-wiki.com) app.
 
 ## Installation
 
 Put the `.swift` files into your app’s Xcode project.
 
-## How To Use
+## How to Use
 
 The easiest way to use Typographizer is the String extension (`String+Typographizer.swift`):
 
@@ -24,7 +26,7 @@ print(s) // This is a string with “dumb” quotes.
 
 ### Ignoring HTML Tags
 
-If your strings may contain any HTML, set the `isHTML` parameter to `true`. Typographizer will then ignore the quotes inside tags and anything between `<pre>`, `<code>`, `<var>`, `<samp>`, `<kbd>`, `<math>`, `<script>`, and `<style>` tags:
+If your string may contain HTML, set the `isHTML` parameter to `true`. Typographizer will then ignore the quotes inside tags and anything between `<pre>`, `<code>`, `<var>`, `<samp>`, `<kbd>`, `<math>`, `<script>`, and `<style>` tags:
 
 ```swift
 var s = "This is a \"string\" with HTML. <code class="">print(\"hello world\")</code>"
@@ -131,3 +133,5 @@ Thanks to Tony Allevato for the great article on [Strings, characters, and perfo
 
 ## License
 The Typographizer source code is released under the MIT License. Please view the LICENSE file for details.
+
+The Typographizer logo is © 2017 Frank Rausch; all rights reserved.
