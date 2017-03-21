@@ -113,6 +113,11 @@ Typographizing took 0.00582303 seconds
 | `sl` | `„` `“` | `‚` `‘` | |
 | `sv` | `”` `”` | `’` `’` | |
 
+## Demo App
+To get started, try the included demo app for macOS.
+
+![](https://cloud.githubusercontent.com/assets/6783714/24149232/0b818208-0e42-11e7-9257-b2afda792f2b.png "Screenshot of Typographizer Demo App")
+
 
 ## To Do
 
