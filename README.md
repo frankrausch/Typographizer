@@ -116,14 +116,16 @@ Typographizing took 0.00582303 seconds
 
 ## To Do
 
+- [ ] Handle special cases like ’80s, ’Twas, Rock ’n’ Roll, etc.
+- [ ] Handle primes in coordinates properly:  
+52°&nbsp;27'&nbsp;20"&nbsp;N, 13°&nbsp;19'&nbsp;11"&nbsp;E → 52°&nbsp;27′&nbsp;20″&nbsp;N, 13°&nbsp;19′&nbsp;11″&nbsp;E
+- [ ] Add support for Hebrew and Swiss German
+- [ ] If there is only one dumb single quote in a string, it’s probably an apostrophe
+- [ ] Analyze HTML tags to verify correct quotes (opening and closing `<p>` tags make a good indicator for opening and closing quotation marks)
+- [ ] Track open/closed state while iterating over the text to make more informed decisions
+- [ ] Add more typographic refinements (e.g. prime symbols, thin spaces)
 - [ ] Build a Swift Framework project (or maybe this is overkill?)
 - [ ] Add Carthage/CocoaPods support (or maybe this is overkill?)
-- [ ] Analyze HTML tags to verify correct quotes (opening and closing `<p>` tags make a good indicator for opening and closing quotation marks)
-- [ ] Add special cases like ’80s, ’Twas, Rock ’n’ Roll, etc.
-- [ ] Add support for Hebrew and Swiss German
-- [ ] If there is only one dumb single quote in a string, it’s definitely an apostrophe
-- [ ] If the isHTML flag is not explicitly set, we could still check automatically whether the string contains any HTML tags
-- [ ] Add more typographic refinements (e.g. prime symbols, thin spaces)
 
 ## Credits
 
