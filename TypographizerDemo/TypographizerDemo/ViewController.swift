@@ -29,6 +29,7 @@ class ViewController: NSViewController, NSTextViewDelegate {
         "cs",
         "da",
         "de",
+        "de_CH",
         "en",
         "et",
         "fi",

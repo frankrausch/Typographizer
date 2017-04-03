@@ -93,7 +93,8 @@ Typographizing took 0.00582303 seconds
 | `bs` | `”` `”` | `’` `’` | |
 | `cs` | `„` `“` | `‚` `‘` | |
 | `da` | `„` `“` | `‚` `‘` | |
-| `de` | `„` `“` | `‚` `‘` | To do: There should be a `de_CH` option for Swiss German with guillemets («»/‹›)|
+| `de` | `„` `“` | `‚` `‘` | |
+| `de_CH` | `«` `»` | `‹` `›` | Swiss German |
 | `en` | `“` `”` | `‘` `’` | |
 | `et` | `„` `“` | `‚` `‘` | |
 | `fi` | `”` `”` | `’` `’` | |
@@ -124,7 +125,7 @@ To get started, try the included demo app for macOS.
 - [ ] Handle special cases like ’80s, ’Twas, Rock ’n’ Roll, etc.
 - [ ] Handle primes in coordinates properly:  
 52°&nbsp;27'&nbsp;20"&nbsp;N, 13°&nbsp;19'&nbsp;11"&nbsp;E → 52°&nbsp;27′&nbsp;20″&nbsp;N, 13°&nbsp;19′&nbsp;11″&nbsp;E
-- [ ] Add support for Hebrew and Swiss German
+- [ ] Add support for Hebrew
 - [ ] If there is only one dumb single quote in a string, it’s probably an apostrophe
 - [ ] Analyze HTML tags to verify correct quotes (opening and closing `<p>` tags make a good indicator for opening and closing quotation marks)
 - [ ] Track open/closed state while iterating over the text to make more informed decisions

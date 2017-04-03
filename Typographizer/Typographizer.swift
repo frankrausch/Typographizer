@@ -100,6 +100,11 @@ struct Typographizer {
             self.closingDoubleQuote = "“"
             self.openingSingleQuote = "\u{201A}"
             self.closingSingleQuote = "‘"
+        case "de_CH":
+            self.openingDoubleQuote = "«"
+            self.closingDoubleQuote = "»"
+            self.openingSingleQuote = "‹"
+            self.closingSingleQuote = "›"
         case "bs",
              "fi",
              "sv":
