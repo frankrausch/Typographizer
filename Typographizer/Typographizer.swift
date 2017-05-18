@@ -209,11 +209,11 @@ struct Typographizer {
     }
     
     private mutating func nextScalar() -> UnicodeScalar? {
-        if let next = bufferedScalar {
-            bufferedScalar = nil
+        if let next = self.bufferedScalar {
+            self.bufferedScalar = nil
             return next
         }
-        return textIterator?.next()
+        return self.textIterator?.next()
     }
     
     // MARK: Tag Token

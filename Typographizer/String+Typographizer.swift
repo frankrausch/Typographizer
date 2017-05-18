@@ -9,7 +9,7 @@
 import Foundation
 
 extension String {
-    func typographized(language: String, isHTML: Bool = false, debug: Bool = false, measurePerformance: Bool = false) -> String {
+    public func typographized(language: String, isHTML: Bool = false, debug: Bool = false, measurePerformance: Bool = false) -> String {
         var t = Typographizer(language: language, text: self)
         t.isHTML = isHTML
         t.isDebugModeEnabled = debug

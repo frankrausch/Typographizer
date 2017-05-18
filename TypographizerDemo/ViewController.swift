@@ -8,6 +8,8 @@
 
 import Cocoa
 
+import Typographizer
+
 class ViewController: NSViewController, NSTextViewDelegate {
     
     @IBOutlet weak var beforeTextView: NSTextView! {
