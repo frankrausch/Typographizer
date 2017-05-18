@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
                    DESC
   s.homepage     = "https://github.com/frankrausch/Typographizer"
   s.license      = { :type => "MIT", :file => "LICENSE" }
-  s.authors      = { 'Frank Rausch' => 'business@raureif.net' }
+  s.authors      = { 'Frank Rausch' => 'git@frankrausch.com' }
 
   s.source       = { :git => "https://github.com/frankrausch/Typographizer.git", :tag => "#{s.version}" }
   s.source_files = "Typographizer/*.{swift}"
