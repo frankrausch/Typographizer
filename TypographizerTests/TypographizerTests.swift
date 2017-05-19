@@ -2,7 +2,7 @@
 //  TypographizerTests.swift
 //  TypographizerTests
 //
-//  Created by Vincent Esche on 5/18/17.
+//  Created by Vincent Esche on 2017-05-18.
 //  Copyright © 2017 Frank Rausch. All rights reserved.
 //
 
