@@ -7,28 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2778DEC21E79AFB2001078C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2778DEC11E79AFB2001078C0 /* AppDelegate.swift */; };
-		2778DEC41E79AFB2001078C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2778DEC31E79AFB2001078C0 /* ViewController.swift */; };
-		2778DEC61E79AFB2001078C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2778DEC51E79AFB2001078C0 /* Assets.xcassets */; };
-		2778DEC91E79AFB2001078C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2778DEC71E79AFB2001078C0 /* Main.storyboard */; };
-		BF0305611ECDD3D000F0190D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF03055D1ECDD3D000F0190D /* Info.plist */; };
-		BF0305621ECDD3D000F0190D /* String+Typographizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF03055E1ECDD3D000F0190D /* String+Typographizer.swift */; };
-		BF0305631ECDD3D000F0190D /* Typographizer.h in Headers */ = {isa = PBXBuildFile; fileRef = BF03055F1ECDD3D000F0190D /* Typographizer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BF0305641ECDD3D000F0190D /* Typographizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0305601ECDD3D000F0190D /* Typographizer.swift */; };
+		2743A5241ECF2A8D007B030B /* String+Typographizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2743A5201ECF2A8D007B030B /* String+Typographizer.swift */; };
+		2743A5251ECF2A8D007B030B /* Typographizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 2743A5211ECF2A8D007B030B /* Typographizer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2743A5261ECF2A8D007B030B /* Typographizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2743A5221ECF2A8D007B030B /* Typographizer.swift */; };
 		BF3D89161ECDCBD000E1AC1B /* TypographizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3D89151ECDCBD000E1AC1B /* TypographizerTests.swift */; };
-		BF3D89371ECDCC8100E1AC1B /* Typographizer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF3D89221ECDCC8100E1AC1B /* Typographizer.framework */; };
-		BF3D89381ECDCC8100E1AC1B /* Typographizer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BF3D89221ECDCC8100E1AC1B /* Typographizer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BF3D89441ECDCE4200E1AC1B /* Typographizer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF3D89221ECDCC8100E1AC1B /* Typographizer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		BF3D89351ECDCC8100E1AC1B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2778DEB61E79AFB2001078C0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BF3D89211ECDCC8100E1AC1B;
-			remoteInfo = Typographizer;
-		};
 		BF3D89451ECDCE4700E1AC1B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2778DEB61E79AFB2001078C0 /* Project object */;
@@ -38,31 +24,11 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		BF3D893C1ECDCC8100E1AC1B /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				BF3D89381ECDCC8100E1AC1B /* Typographizer.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		2778DEBE1E79AFB2001078C0 /* TypographizerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TypographizerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2778DEC11E79AFB2001078C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2778DEC31E79AFB2001078C0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2778DEC51E79AFB2001078C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2778DEC81E79AFB2001078C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2778DECA1E79AFB2001078C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BF03055D1ECDD3D000F0190D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BF03055E1ECDD3D000F0190D /* String+Typographizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Typographizer.swift"; sourceTree = "<group>"; };
-		BF03055F1ECDD3D000F0190D /* Typographizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Typographizer.h; sourceTree = "<group>"; };
-		BF0305601ECDD3D000F0190D /* Typographizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Typographizer.swift; sourceTree = "<group>"; };
+		2743A51F1ECF2A8D007B030B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Sources/Info.plist; sourceTree = SOURCE_ROOT; };
+		2743A5201ECF2A8D007B030B /* String+Typographizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Typographizer.swift"; path = "Sources/String+Typographizer.swift"; sourceTree = SOURCE_ROOT; };
+		2743A5211ECF2A8D007B030B /* Typographizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Typographizer.h; path = Sources/Typographizer.h; sourceTree = SOURCE_ROOT; };
+		2743A5221ECF2A8D007B030B /* Typographizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Typographizer.swift; path = Sources/Typographizer.swift; sourceTree = SOURCE_ROOT; };
 		BF3D89131ECDCBD000E1AC1B /* TypographizerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TypographizerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF3D89151ECDCBD000E1AC1B /* TypographizerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypographizerTests.swift; sourceTree = "<group>"; };
 		BF3D89171ECDCBD000E1AC1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -70,14 +36,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2778DEBB1E79AFB2001078C0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BF3D89371ECDCC8100E1AC1B /* Typographizer.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		BF3D89101ECDCBD000E1AC1B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -100,7 +58,6 @@
 			isa = PBXGroup;
 			children = (
 				BF3D89231ECDCC8100E1AC1B /* Typographizer */,
-				2778DEC01E79AFB2001078C0 /* TypographizerDemo */,
 				BF3D89141ECDCBD000E1AC1B /* TypographizerTests */,
 				2778DEBF1E79AFB2001078C0 /* Products */,
 			);
@@ -109,23 +66,10 @@
 		2778DEBF1E79AFB2001078C0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2778DEBE1E79AFB2001078C0 /* TypographizerDemo.app */,
 				BF3D89131ECDCBD000E1AC1B /* TypographizerTests.xctest */,
 				BF3D89221ECDCC8100E1AC1B /* Typographizer.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		2778DEC01E79AFB2001078C0 /* TypographizerDemo */ = {
-			isa = PBXGroup;
-			children = (
-				2778DEC11E79AFB2001078C0 /* AppDelegate.swift */,
-				2778DEC31E79AFB2001078C0 /* ViewController.swift */,
-				2778DEC51E79AFB2001078C0 /* Assets.xcassets */,
-				2778DEC71E79AFB2001078C0 /* Main.storyboard */,
-				2778DECA1E79AFB2001078C0 /* Info.plist */,
-			);
-			path = TypographizerDemo;
 			sourceTree = "<group>";
 		};
 		BF3D89141ECDCBD000E1AC1B /* TypographizerTests */ = {
@@ -140,10 +84,10 @@
 		BF3D89231ECDCC8100E1AC1B /* Typographizer */ = {
 			isa = PBXGroup;
 			children = (
-				BF0305601ECDD3D000F0190D /* Typographizer.swift */,
-				BF03055E1ECDD3D000F0190D /* String+Typographizer.swift */,
-				BF03055D1ECDD3D000F0190D /* Info.plist */,
-				BF03055F1ECDD3D000F0190D /* Typographizer.h */,
+				2743A51F1ECF2A8D007B030B /* Info.plist */,
+				2743A5201ECF2A8D007B030B /* String+Typographizer.swift */,
+				2743A5211ECF2A8D007B030B /* Typographizer.h */,
+				2743A5221ECF2A8D007B030B /* Typographizer.swift */,
 			);
 			path = Typographizer;
 			sourceTree = "<group>";
@@ -155,32 +99,13 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF0305631ECDD3D000F0190D /* Typographizer.h in Headers */,
+				2743A5251ECF2A8D007B030B /* Typographizer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		2778DEBD1E79AFB2001078C0 /* TypographizerDemo */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2778DECD1E79AFB2001078C0 /* Build configuration list for PBXNativeTarget "TypographizerDemo" */;
-			buildPhases = (
-				2778DEBA1E79AFB2001078C0 /* Sources */,
-				2778DEBB1E79AFB2001078C0 /* Frameworks */,
-				2778DEBC1E79AFB2001078C0 /* Resources */,
-				BF3D893C1ECDCC8100E1AC1B /* Embed Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BF3D89361ECDCC8100E1AC1B /* PBXTargetDependency */,
-			);
-			name = TypographizerDemo;
-			productName = TypographizerDemo;
-			productReference = 2778DEBE1E79AFB2001078C0 /* TypographizerDemo.app */;
-			productType = "com.apple.product-type.application";
-		};
 		BF3D89121ECDCBD000E1AC1B /* TypographizerTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BF3D891C1ECDCBD000E1AC1B /* Build configuration list for PBXNativeTarget "TypographizerTests" */;
@@ -224,26 +149,21 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Frank Rausch";
 				TargetAttributes = {
-					2778DEBD1E79AFB2001078C0 = {
-						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 9KYFX28EJA;
-						ProvisioningStyle = Automatic;
-					};
 					BF3D89121ECDCBD000E1AC1B = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = GSGGFU6A2H;
 						ProvisioningStyle = Manual;
 					};
 					BF3D89211ECDCC8100E1AC1B = {
 						CreatedOnToolsVersion = 8.3.2;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Manual;
 					};
 				};
 			};
-			buildConfigurationList = 2778DEB91E79AFB2001078C0 /* Build configuration list for PBXProject "TypographizerDemo" */;
+			buildConfigurationList = 2778DEB91E79AFB2001078C0 /* Build configuration list for PBXProject "Typographizer" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -256,23 +176,13 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2778DEBD1E79AFB2001078C0 /* TypographizerDemo */,
-				BF3D89121ECDCBD000E1AC1B /* TypographizerTests */,
 				BF3D89211ECDCC8100E1AC1B /* Typographizer */,
+				BF3D89121ECDCBD000E1AC1B /* TypographizerTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2778DEBC1E79AFB2001078C0 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2778DEC61E79AFB2001078C0 /* Assets.xcassets in Resources */,
-				2778DEC91E79AFB2001078C0 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		BF3D89111ECDCBD000E1AC1B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -284,22 +194,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF0305611ECDD3D000F0190D /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2778DEBA1E79AFB2001078C0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2778DEC41E79AFB2001078C0 /* ViewController.swift in Sources */,
-				2778DEC21E79AFB2001078C0 /* AppDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		BF3D890F1ECDCBD000E1AC1B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -312,36 +212,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF0305621ECDD3D000F0190D /* String+Typographizer.swift in Sources */,
-				BF0305641ECDD3D000F0190D /* Typographizer.swift in Sources */,
+				2743A5261ECF2A8D007B030B /* Typographizer.swift in Sources */,
+				2743A5241ECF2A8D007B030B /* String+Typographizer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		BF3D89361ECDCC8100E1AC1B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BF3D89211ECDCC8100E1AC1B /* Typographizer */;
-			targetProxy = BF3D89351ECDCC8100E1AC1B /* PBXContainerItemProxy */;
-		};
 		BF3D89461ECDCE4700E1AC1B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = BF3D89211ECDCC8100E1AC1B /* Typographizer */;
 			targetProxy = BF3D89451ECDCE4700E1AC1B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		2778DEC71E79AFB2001078C0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2778DEC81E79AFB2001078C0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		2778DECB1E79AFB2001078C0 /* Debug */ = {
@@ -434,50 +318,16 @@
 			};
 			name = Release;
 		};
-		2778DECE1E79AFB2001078C0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 9KYFX28EJA;
-				INFOPLIST_FILE = TypographizerDemo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_BUNDLE_IDENTIFIER = net.raureif.TypographizerDemo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Debug;
-		};
-		2778DECF1E79AFB2001078C0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 9KYFX28EJA;
-				INFOPLIST_FILE = TypographizerDemo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_BUNDLE_IDENTIFIER = net.raureif.TypographizerDemo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
 		BF3D891A1ECDCBD000E1AC1B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = GSGGFU6A2H;
 				INFOPLIST_FILE = TypographizerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.raureif.TypographizerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -485,15 +335,13 @@
 		BF3D891B1ECDCBD000E1AC1B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TypographizerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.raureif.TypographizerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -502,7 +350,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -511,7 +360,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = Typographizer/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
@@ -519,6 +368,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -529,6 +379,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -538,7 +389,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = Typographizer/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
@@ -555,20 +406,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2778DEB91E79AFB2001078C0 /* Build configuration list for PBXProject "TypographizerDemo" */ = {
+		2778DEB91E79AFB2001078C0 /* Build configuration list for PBXProject "Typographizer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2778DECB1E79AFB2001078C0 /* Debug */,
 				2778DECC1E79AFB2001078C0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2778DECD1E79AFB2001078C0 /* Build configuration list for PBXNativeTarget "TypographizerDemo" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2778DECE1E79AFB2001078C0 /* Debug */,
-				2778DECF1E79AFB2001078C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
