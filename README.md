@@ -130,8 +130,6 @@ To get started, try the included demo app for macOS.
 - [ ] Analyze HTML tags to verify correct quotes (opening and closing `<p>` tags make a good indicator for opening and closing quotation marks)
 - [ ] Track open/closed state while iterating over the text to make more informed decisions
 - [ ] Add more typographic refinements (e.g. prime symbols, thin spaces)
-- [ ] Build a Swift Framework project (or maybe this is overkill?)
-- [ ] Add Carthage/CocoaPods support (or maybe this is overkill?)
 
 ## Credits
 
