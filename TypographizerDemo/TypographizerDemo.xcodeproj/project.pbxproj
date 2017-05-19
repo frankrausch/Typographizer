@@ -11,8 +11,8 @@
 		2778DEC41E79AFB2001078C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2778DEC31E79AFB2001078C0 /* ViewController.swift */; };
 		2778DEC61E79AFB2001078C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2778DEC51E79AFB2001078C0 /* Assets.xcassets */; };
 		2778DEC91E79AFB2001078C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2778DEC71E79AFB2001078C0 /* Main.storyboard */; };
-		2778DEE11E79B161001078C0 /* String+Typographizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2778DEDF1E79B161001078C0 /* String+Typographizer.swift */; };
-		2778DEE21E79B161001078C0 /* Typographizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2778DEE01E79B161001078C0 /* Typographizer.swift */; };
+		8EF78D211ECEBEEA00BE4034 /* String+Typographizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF78D1F1ECEBEEA00BE4034 /* String+Typographizer.swift */; };
+		8EF78D221ECEBEEA00BE4034 /* Typographizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF78D201ECEBEEA00BE4034 /* Typographizer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,8 +22,8 @@
 		2778DEC51E79AFB2001078C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2778DEC81E79AFB2001078C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2778DECA1E79AFB2001078C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2778DEDF1E79B161001078C0 /* String+Typographizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Typographizer.swift"; sourceTree = "<group>"; };
-		2778DEE01E79B161001078C0 /* Typographizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Typographizer.swift; sourceTree = "<group>"; };
+		8EF78D1F1ECEBEEA00BE4034 /* String+Typographizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Typographizer.swift"; path = "../Sources/String+Typographizer.swift"; sourceTree = "<group>"; };
+		8EF78D201ECEBEEA00BE4034 /* Typographizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Typographizer.swift; path = ../Sources/Typographizer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,7 +40,7 @@
 		2778DEB51E79AFB2001078C0 = {
 			isa = PBXGroup;
 			children = (
-				2778DEDE1E79B161001078C0 /* Typographizer */,
+				2778DEDE1E79B161001078C0 /* Sources */,
 				2778DEC01E79AFB2001078C0 /* TypographizerDemo */,
 				2778DEBF1E79AFB2001078C0 /* Products */,
 			);
@@ -66,13 +66,13 @@
 			path = TypographizerDemo;
 			sourceTree = "<group>";
 		};
-		2778DEDE1E79B161001078C0 /* Typographizer */ = {
+		2778DEDE1E79B161001078C0 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				2778DEDF1E79B161001078C0 /* String+Typographizer.swift */,
-				2778DEE01E79B161001078C0 /* Typographizer.swift */,
+				8EF78D1F1ECEBEEA00BE4034 /* String+Typographizer.swift */,
+				8EF78D201ECEBEEA00BE4034 /* Typographizer.swift */,
 			);
-			name = Typographizer;
+			name = Sources;
 			path = ../Typographizer;
 			sourceTree = "<group>";
 		};
@@ -149,8 +149,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2778DEC41E79AFB2001078C0 /* ViewController.swift in Sources */,
-				2778DEE11E79B161001078C0 /* String+Typographizer.swift in Sources */,
-				2778DEE21E79B161001078C0 /* Typographizer.swift in Sources */,
+				8EF78D211ECEBEEA00BE4034 /* String+Typographizer.swift in Sources */,
+				8EF78D221ECEBEEA00BE4034 /* Typographizer.swift in Sources */,
 				2778DEC21E79AFB2001078C0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
