@@ -52,7 +52,7 @@ struct Typographizer {
     }
 
     private mutating func refreshLanguage() {
-        switch language {
+        switch self.language {
         case "he":
             // TODO: Insert proper replacements. 
             // Fixing dumb quotation marks in Hebrew is tricky,
@@ -123,7 +123,7 @@ struct Typographizer {
     }
 
     mutating func refreshTextIterator() {
-        self.textIterator = text.unicodeScalars.makeIterator()
+        self.textIterator = self.text.unicodeScalars.makeIterator()
     }
 
     mutating func typographize() -> String {
@@ -200,7 +200,7 @@ struct Typographizer {
             case " " where self.tagsToSkip.contains(tagName),
                  ">" where self.tagsToSkip.contains(tagName):
                 tokenText.unicodeScalars.append(ch)
-                tokenText.append(fastForwardToClosingTag(tagName))
+                tokenText.append(self.fastForwardToClosingTag(tagName))
                 break loop
             case ">":
                 tokenText.unicodeScalars.append(ch)
@@ -296,7 +296,7 @@ struct Typographizer {
                     fixingResult = .openingDouble
                 } else {
                     // The first character of a string:
-                    tokenText = closingDoubleQuote
+                    tokenText = self.closingDoubleQuote
                     fixingResult = .closingDouble
                 }
             }
@@ -319,11 +319,11 @@ struct Typographizer {
             } else {
                 if self.previousScalar == nil {
                     // The first character of a string:
-                    tokenText = openingSingleQuote
+                    tokenText = self.openingSingleQuote
                     fixingResult = .openingSingle
                 } else {
                     // The last character of a string:
-                    tokenText = closingSingleQuote
+                    tokenText = self.closingSingleQuote
                     fixingResult = .closingSingle
                 }
             }
