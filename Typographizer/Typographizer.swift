@@ -10,43 +10,18 @@ import Foundation
 
 struct Typographizer {
 
-    enum TypographizerTokenResult: String {
-        case openingSingle = "opening-single"
-        case closingSingle = "closing-single"
-        case openingDouble = "opening-double"
-        case closingDouble = "closing-double"
-        case apostrophe = "apostrophe"
-        case enDash = "en-dash"
-        // Unchanged text because it doesn’t contain the trigger characters:
-        case unchanged = "unchanged"
-        // It’s one of the trigger characters but didn’t need changing:
-        case ignored = "ignored"
-        // Was skipped because it was either an HTML tag, or a pair of tags with protected text in between:
-        case skipped = "skipped"
-    }
-    
-    struct TypographizerToken {
-        let result: TypographizerTokenResult
-        let text: String
-        
-        init(_ result: TypographizerTokenResult, _ text: String) {
-            self.result = result
-            self.text = text
-        }
-    }
-
     var language: String {
         didSet {
             self.refreshLanguage()
         }
     }
-    
+
     var text = "" {
         didSet {
             self.refreshTextIterator()
         }
     }
-    
+
     private var textIterator: String.UnicodeScalarView.Iterator?
     private var bufferedScalar: UnicodeScalar?
     private var previousScalar: UnicodeScalar?
@@ -54,17 +29,17 @@ struct Typographizer {
     var isDebugModeEnabled = false
     var isMeasurePerformanceEnabled = false
     var isHTML = false
-    
+
     private var openingDoubleQuote: String = "·"
     private var closingDoubleQuote: String = "·"
     private var openingSingleQuote: String = "·"
     private var closingSingleQuote: String = "·"
-    
+
     private let apostrophe: String = "’"
     private let enDash: String = "–"
-    private let tagsToSkip = ["pre", "code", "var", "samp", "kbd", "math", "script", "style"]
-    private let openingBracketsArray: [UnicodeScalar] = ["(", "["]
-    
+    private let tagsToSkip: Set<String> = ["pre", "code", "var", "samp", "kbd", "math", "script", "style"]
+    private let openingBracketsSet: Set<UnicodeScalar> = ["(", "["]
+
     init(language: String, text: String, isHTML: Bool = false, debug: Bool = false, measurePerformance: Bool = false) {
         self.text = text
         self.isHTML = isHTML
@@ -75,9 +50,9 @@ struct Typographizer {
         self.refreshLanguage()
         self.refreshTextIterator()
     }
-    
+
     private mutating func refreshLanguage() {
-        switch self.language {
+        switch language {
         case "he":
             // TODO: Insert proper replacements. 
             // Fixing dumb quotation marks in Hebrew is tricky,
@@ -146,11 +121,11 @@ struct Typographizer {
             self.closingSingleQuote = "’"
         }
     }
-    
+
     mutating func refreshTextIterator() {
-        self.textIterator = self.text.unicodeScalars.makeIterator()
+        self.textIterator = text.unicodeScalars.makeIterator()
     }
-    
+
     mutating func typographize() -> String {
         #if DEBUG
             var startTime: Date?
@@ -158,8 +133,8 @@ struct Typographizer {
                 startTime = Date()
             }
         #endif
-        
-        var tokens = [TypographizerToken]()
+
+        var tokens = [Token]()
         do {
             while let token = try self.nextToken() {
                 tokens.append(token)
@@ -174,27 +149,26 @@ struct Typographizer {
                     return self.text // return unchanged text
                 }
         }
-        
+
         let s = tokens.flatMap({$0.text}).joined()
-        
+
         #if DEBUG
             if let startTime = startTime {
                 let endTime = Date().timeIntervalSince(startTime)
                 print("Typographizing took \(NSString(format:"%.8f", endTime)) seconds")
             }
         #endif
-        
+
         return s
     }
-    
-    
-    private mutating func nextToken() throws -> TypographizerToken? {
-        while let ch = nextScalar() {
+
+    private mutating func nextToken() throws -> Token? {
+        while let ch = self.nextScalar() {
             switch ch {
             case "´",
                  "`":
                 // FIXME: Replacing a combining accent only works for the very first scalar in a string
-                return TypographizerToken(.apostrophe, self.apostrophe)
+                return Token(.apostrophe, apostrophe)
             case "\"",
                  "'",
                  "-":
@@ -207,7 +181,7 @@ struct Typographizer {
         }
         return nil
     }
-    
+
     private mutating func nextScalar() -> UnicodeScalar? {
         if let next = bufferedScalar {
             bufferedScalar = nil
@@ -215,10 +189,10 @@ struct Typographizer {
         }
         return textIterator?.next()
     }
-    
+
     // MARK: Tag Token
-    
-    private mutating func htmlToken() throws -> TypographizerToken {
+
+    private mutating func htmlToken() throws -> Token {
         var tokenText = "<"
         var tagName = ""
         loop: while let ch = nextScalar() {
@@ -226,7 +200,7 @@ struct Typographizer {
             case " " where self.tagsToSkip.contains(tagName),
                  ">" where self.tagsToSkip.contains(tagName):
                 tokenText.unicodeScalars.append(ch)
-                tokenText.append(self.fastForwardToClosingTag(tagName))
+                tokenText.append(fastForwardToClosingTag(tagName))
                 break loop
             case ">":
                 tokenText.unicodeScalars.append(ch)
@@ -236,12 +210,12 @@ struct Typographizer {
                 tokenText.unicodeScalars.append(ch)
             }
         }
-        return TypographizerToken(.skipped, tokenText)
+        return Token(.skipped, tokenText)
     }
-    
+
     private mutating func fastForwardToClosingTag(_ tag: String) -> String {
         var buffer = ""
-        
+
         loop: while let ch = nextScalar() {
             buffer.unicodeScalars.append(ch)
             if ch == "<" {
@@ -259,7 +233,7 @@ struct Typographizer {
         }
         return buffer
     }
-    
+
     private mutating func checkForMatchingTag(_ tag: String) -> (bufferedString: String, isMatchingTag: Bool) {
         var buffer = ""
         loop: while let ch = nextScalar() {
@@ -267,45 +241,45 @@ struct Typographizer {
             if ch == ">" {
                 break loop
             }
-            
+
         }
         return (buffer, buffer.hasPrefix(tag))
     }
-    
+
     // MARK: Unchanged Token
-    
-    private mutating func unchangedToken(_ first: UnicodeScalar) throws -> TypographizerToken {
+
+    private mutating func unchangedToken(_ first: UnicodeScalar) throws -> Token {
         var tokenText = String(first)
         self.previousScalar = first
-        
+
         loop: while let ch = nextScalar() {
             switch ch {
             case "\"", "'", "<", "-":
-                bufferedScalar = ch
+                self.bufferedScalar = ch
                 break loop
             default:
                 self.previousScalar = ch
                 tokenText.unicodeScalars.append(ch)
             }
         }
-        return TypographizerToken(.unchanged, tokenText)
+        return Token(.unchanged, tokenText)
     }
-    
+
     // MARK: Fixable Token (quote, apostrophe, hyphen)
-    
-    private mutating func fixableToken(_ first: UnicodeScalar) throws -> TypographizerToken {
+
+    private mutating func fixableToken(_ first: UnicodeScalar) throws -> Token {
         var tokenText = String(first)
-        
+
         let nextScalar = self.nextScalar()
         self.bufferedScalar = nextScalar
-        
-        var fixingResult: TypographizerTokenResult = .ignored
-        
+
+        var fixingResult: Result = .ignored
+
         switch first {
         case "\"":
             if let previousScalar = self.previousScalar,
                 let nextScalar = nextScalar {
-                if CharacterSet.whitespacesAndNewlines.contains(previousScalar) || self.openingBracketsArray.contains(previousScalar) {
+                if CharacterSet.whitespacesAndNewlines.contains(previousScalar) || self.openingBracketsSet.contains(previousScalar) {
                     tokenText = self.openingDoubleQuote
                     fixingResult = .openingDouble
                 } else if CharacterSet.whitespacesAndNewlines.contains(nextScalar) || CharacterSet.punctuationCharacters.contains(nextScalar) {
@@ -316,24 +290,23 @@ struct Typographizer {
                     fixingResult = .closingDouble
                 }
             } else {
-                if previousScalar == nil {
+                if self.previousScalar == nil {
                     // The last character of a string:
                     tokenText = self.openingDoubleQuote
                     fixingResult = .openingDouble
                 } else {
                     // The first character of a string:
-                    tokenText = self.closingDoubleQuote
+                    tokenText = closingDoubleQuote
                     fixingResult = .closingDouble
                 }
             }
-            
+
         case "'":
             if let previousScalar = self.previousScalar,
                 let nextScalar = nextScalar {
-                
+
                 if CharacterSet.whitespacesAndNewlines.contains(previousScalar)
-                    || CharacterSet.punctuationCharacters.contains(previousScalar) && !CharacterSet.whitespacesAndNewlines.contains(nextScalar)
-                {
+                    || CharacterSet.punctuationCharacters.contains(previousScalar) && !CharacterSet.whitespacesAndNewlines.contains(nextScalar) {
                     tokenText = self.openingSingleQuote
                     fixingResult = .openingSingle
                 } else if CharacterSet.whitespacesAndNewlines.contains(nextScalar) || CharacterSet.punctuationCharacters.contains(nextScalar) {
@@ -344,13 +317,13 @@ struct Typographizer {
                     fixingResult = .apostrophe
                 }
             } else {
-                if previousScalar == nil {
+                if self.previousScalar == nil {
                     // The first character of a string:
-                    tokenText = self.openingSingleQuote
+                    tokenText = openingSingleQuote
                     fixingResult = .openingSingle
                 } else {
                     // The last character of a string:
-                    tokenText = self.closingSingleQuote
+                    tokenText = closingSingleQuote
                     fixingResult = .closingSingle
                 }
             }
@@ -358,22 +331,49 @@ struct Typographizer {
             if let previousScalar = self.previousScalar,
                 let nextScalar = nextScalar,
                 CharacterSet.whitespacesAndNewlines.contains(previousScalar)
-                && CharacterSet.whitespacesAndNewlines.contains(nextScalar)
-            {
+                && CharacterSet.whitespacesAndNewlines.contains(nextScalar) {
                 tokenText = self.enDash
                 fixingResult = .enDash
             }
         default: ()
         }
-        
+
         self.previousScalar = tokenText.unicodeScalars.last
-        
+
         #if DEBUG
             if self.isDebugModeEnabled && self.isHTML {
                 tokenText = "<span class=\"typographizer-debug typographizer-debug--\(fixingResult.rawValue)\">\(tokenText)</span>"
             }
         #endif
-        return TypographizerToken(fixingResult, tokenText)
+        return Token(fixingResult, tokenText)
+    }
+}
+
+extension Typographizer {
+    
+    
+    enum Result: String {
+        case openingSingle = "opening-single"
+        case closingSingle = "closing-single"
+        case openingDouble = "opening-double"
+        case closingDouble = "closing-double"
+        case apostrophe
+        case enDash = "en-dash"
+        // Unchanged text because it doesn’t contain the trigger characters:
+        case unchanged
+        // It’s one of the trigger characters but didn’t need changing:
+        case ignored
+        // Was skipped because it was either an HTML tag, or a pair of tags with protected text in between:
+        case skipped
     }
     
+    struct Token {
+        let result: Result
+        let text: String
+        
+        init(_ result: Result, _ text: String) {
+            self.result = result
+            self.text = text
+        }
+    }
 }

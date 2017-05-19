@@ -14,7 +14,7 @@ extension String {
         t.isHTML = isHTML
         t.isDebugModeEnabled = debug
         t.isMeasurePerformanceEnabled = measurePerformance
-        
+
         return t.typographize()
     }
 }

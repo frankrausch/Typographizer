@@ -139,6 +139,20 @@ Typographizer was created by [Frank Rausch](http://frankrausch.com) ([@frankraus
 
 Thanks to Tony Allevato for the great article on [Strings, characters, and performance in Swift—a deep dive](https://medium.com/@tonyallevato/strings-characters-and-performance-in-swift-a-deep-dive-b7b5bde58d53).
 
+## Contribution Guidelines
+Please always use self when you are accesing methods and properties.
+
+Prefered
+```
+self.coolMethod()
+```
+
+Not prefered
+```
+coolMethod()
+```
+
+
 ## License
 The Typographizer source code is released under the MIT License. Please view the LICENSE file for details.
 
