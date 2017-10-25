@@ -10,6 +10,15 @@
 		2743A5241ECF2A8D007B030B /* String+Typographizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2743A5201ECF2A8D007B030B /* String+Typographizer.swift */; };
 		2743A5251ECF2A8D007B030B /* Typographizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 2743A5211ECF2A8D007B030B /* Typographizer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2743A5261ECF2A8D007B030B /* Typographizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2743A5221ECF2A8D007B030B /* Typographizer.swift */; };
+		275F69B31FA0D9E0009F9BE7 /* Typographizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 275F69B11FA0D9E0009F9BE7 /* Typographizer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		275F69BD1FA0DAED009F9BE7 /* String+Typographizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2743A5201ECF2A8D007B030B /* String+Typographizer.swift */; };
+		275F69BF1FA0DAF2009F9BE7 /* Typographizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2743A5221ECF2A8D007B030B /* Typographizer.swift */; };
+		275F69C91FA0DB3E009F9BE7 /* Typographizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 275F69C71FA0DB3E009F9BE7 /* Typographizer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		275F69D61FA0DB69009F9BE7 /* Typographizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 275F69D41FA0DB69009F9BE7 /* Typographizer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		275F69E41FA0E296009F9BE7 /* String+Typographizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2743A5201ECF2A8D007B030B /* String+Typographizer.swift */; };
+		275F69E51FA0E297009F9BE7 /* String+Typographizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2743A5201ECF2A8D007B030B /* String+Typographizer.swift */; };
+		275F69E81FA0E2A2009F9BE7 /* Typographizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2743A5221ECF2A8D007B030B /* Typographizer.swift */; };
+		275F69E91FA0E2A3009F9BE7 /* Typographizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2743A5221ECF2A8D007B030B /* Typographizer.swift */; };
 		BF3D89161ECDCBD000E1AC1B /* TypographizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3D89151ECDCBD000E1AC1B /* TypographizerTests.swift */; };
 		BF3D89441ECDCE4200E1AC1B /* Typographizer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF3D89221ECDCC8100E1AC1B /* Typographizer.framework */; };
 /* End PBXBuildFile section */
@@ -25,10 +34,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2743A51F1ECF2A8D007B030B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Sources/Info.plist; sourceTree = SOURCE_ROOT; };
+		2743A51F1ECF2A8D007B030B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Typographizer-macOS/Info.plist"; sourceTree = SOURCE_ROOT; };
 		2743A5201ECF2A8D007B030B /* String+Typographizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Typographizer.swift"; path = "Sources/String+Typographizer.swift"; sourceTree = SOURCE_ROOT; };
-		2743A5211ECF2A8D007B030B /* Typographizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Typographizer.h; path = Sources/Typographizer.h; sourceTree = SOURCE_ROOT; };
+		2743A5211ECF2A8D007B030B /* Typographizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Typographizer.h; path = "Typographizer-macOS/Typographizer.h"; sourceTree = SOURCE_ROOT; };
 		2743A5221ECF2A8D007B030B /* Typographizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Typographizer.swift; path = Sources/Typographizer.swift; sourceTree = SOURCE_ROOT; };
+		275F69AF1FA0D9E0009F9BE7 /* Typographizer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Typographizer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		275F69B11FA0D9E0009F9BE7 /* Typographizer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Typographizer.h; sourceTree = "<group>"; };
+		275F69B21FA0D9E0009F9BE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		275F69C51FA0DB3E009F9BE7 /* Typographizer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Typographizer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		275F69C71FA0DB3E009F9BE7 /* Typographizer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Typographizer.h; sourceTree = "<group>"; };
+		275F69C81FA0DB3E009F9BE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		275F69D21FA0DB69009F9BE7 /* Typographizer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Typographizer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		275F69D41FA0DB69009F9BE7 /* Typographizer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Typographizer.h; sourceTree = "<group>"; };
+		275F69D51FA0DB69009F9BE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF3D89131ECDCBD000E1AC1B /* TypographizerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TypographizerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF3D89151ECDCBD000E1AC1B /* TypographizerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypographizerTests.swift; sourceTree = "<group>"; };
 		BF3D89171ECDCBD000E1AC1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -36,6 +54,27 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		275F69AB1FA0D9E0009F9BE7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		275F69C11FA0DB3E009F9BE7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		275F69CE1FA0DB69009F9BE7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BF3D89101ECDCBD000E1AC1B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -54,11 +93,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		275F69B01FA0D9E0009F9BE7 /* Typographizer-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				275F69B11FA0D9E0009F9BE7 /* Typographizer.h */,
+				275F69B21FA0D9E0009F9BE7 /* Info.plist */,
+			);
+			path = "Typographizer-iOS";
+			sourceTree = "<group>";
+		};
+		275F69C61FA0DB3E009F9BE7 /* Typographizer-watchOS */ = {
+			isa = PBXGroup;
+			children = (
+				275F69C71FA0DB3E009F9BE7 /* Typographizer.h */,
+				275F69C81FA0DB3E009F9BE7 /* Info.plist */,
+			);
+			path = "Typographizer-watchOS";
+			sourceTree = "<group>";
+		};
+		275F69D31FA0DB69009F9BE7 /* Typographizer-tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				275F69D41FA0DB69009F9BE7 /* Typographizer.h */,
+				275F69D51FA0DB69009F9BE7 /* Info.plist */,
+			);
+			path = "Typographizer-tvOS";
+			sourceTree = "<group>";
+		};
+		275F69EA1FA0E2AA009F9BE7 /* Typographizer-macOS */ = {
+			isa = PBXGroup;
+			children = (
+				2743A5211ECF2A8D007B030B /* Typographizer.h */,
+				2743A51F1ECF2A8D007B030B /* Info.plist */,
+			);
+			path = "Typographizer-macOS";
+			sourceTree = "<group>";
+		};
 		2778DEB51E79AFB2001078C0 = {
 			isa = PBXGroup;
 			children = (
 				BF3D89231ECDCC8100E1AC1B /* Typographizer */,
 				BF3D89141ECDCBD000E1AC1B /* TypographizerTests */,
+				275F69EA1FA0E2AA009F9BE7 /* Typographizer-macOS */,
+				275F69B01FA0D9E0009F9BE7 /* Typographizer-iOS */,
+				275F69C61FA0DB3E009F9BE7 /* Typographizer-watchOS */,
+				275F69D31FA0DB69009F9BE7 /* Typographizer-tvOS */,
 				2778DEBF1E79AFB2001078C0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,6 +147,9 @@
 			children = (
 				BF3D89131ECDCBD000E1AC1B /* TypographizerTests.xctest */,
 				BF3D89221ECDCC8100E1AC1B /* Typographizer.framework */,
+				275F69AF1FA0D9E0009F9BE7 /* Typographizer.framework */,
+				275F69C51FA0DB3E009F9BE7 /* Typographizer.framework */,
+				275F69D21FA0DB69009F9BE7 /* Typographizer.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -84,9 +166,7 @@
 		BF3D89231ECDCC8100E1AC1B /* Typographizer */ = {
 			isa = PBXGroup;
 			children = (
-				2743A51F1ECF2A8D007B030B /* Info.plist */,
 				2743A5201ECF2A8D007B030B /* String+Typographizer.swift */,
-				2743A5211ECF2A8D007B030B /* Typographizer.h */,
 				2743A5221ECF2A8D007B030B /* Typographizer.swift */,
 			);
 			path = Typographizer;
@@ -95,6 +175,30 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		275F69AC1FA0D9E0009F9BE7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				275F69B31FA0D9E0009F9BE7 /* Typographizer.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		275F69C21FA0DB3E009F9BE7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				275F69C91FA0DB3E009F9BE7 /* Typographizer.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		275F69CF1FA0DB69009F9BE7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				275F69D61FA0DB69009F9BE7 /* Typographizer.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BF3D891F1ECDCC8100E1AC1B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -106,6 +210,60 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		275F69AE1FA0D9E0009F9BE7 /* Typographizer-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 275F69B61FA0D9E0009F9BE7 /* Build configuration list for PBXNativeTarget "Typographizer-iOS" */;
+			buildPhases = (
+				275F69AA1FA0D9E0009F9BE7 /* Sources */,
+				275F69AB1FA0D9E0009F9BE7 /* Frameworks */,
+				275F69AC1FA0D9E0009F9BE7 /* Headers */,
+				275F69AD1FA0D9E0009F9BE7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Typographizer-iOS";
+			productName = "Typographizer-iOS";
+			productReference = 275F69AF1FA0D9E0009F9BE7 /* Typographizer.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		275F69C41FA0DB3E009F9BE7 /* Typographizer-watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 275F69CC1FA0DB3E009F9BE7 /* Build configuration list for PBXNativeTarget "Typographizer-watchOS" */;
+			buildPhases = (
+				275F69C01FA0DB3E009F9BE7 /* Sources */,
+				275F69C11FA0DB3E009F9BE7 /* Frameworks */,
+				275F69C21FA0DB3E009F9BE7 /* Headers */,
+				275F69C31FA0DB3E009F9BE7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Typographizer-watchOS";
+			productName = "Typographizer-watchOS";
+			productReference = 275F69C51FA0DB3E009F9BE7 /* Typographizer.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		275F69D11FA0DB69009F9BE7 /* Typographizer-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 275F69D71FA0DB69009F9BE7 /* Build configuration list for PBXNativeTarget "Typographizer-tvOS" */;
+			buildPhases = (
+				275F69CD1FA0DB69009F9BE7 /* Sources */,
+				275F69CE1FA0DB69009F9BE7 /* Frameworks */,
+				275F69CF1FA0DB69009F9BE7 /* Headers */,
+				275F69D01FA0DB69009F9BE7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Typographizer-tvOS";
+			productName = "Typographizer-tvOS";
+			productReference = 275F69D21FA0DB69009F9BE7 /* Typographizer.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		BF3D89121ECDCBD000E1AC1B /* TypographizerTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BF3D891C1ECDCBD000E1AC1B /* Build configuration list for PBXNativeTarget "TypographizerTests" */;
@@ -124,9 +282,9 @@
 			productReference = BF3D89131ECDCBD000E1AC1B /* TypographizerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		BF3D89211ECDCC8100E1AC1B /* Typographizer */ = {
+		BF3D89211ECDCC8100E1AC1B /* Typographizer-macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BF3D89391ECDCC8100E1AC1B /* Build configuration list for PBXNativeTarget "Typographizer" */;
+			buildConfigurationList = BF3D89391ECDCC8100E1AC1B /* Build configuration list for PBXNativeTarget "Typographizer-macOS" */;
 			buildPhases = (
 				BF3D891D1ECDCC8100E1AC1B /* Sources */,
 				BF3D891E1ECDCC8100E1AC1B /* Frameworks */,
@@ -137,7 +295,7 @@
 			);
 			dependencies = (
 			);
-			name = Typographizer;
+			name = "Typographizer-macOS";
 			productName = Typographizer;
 			productReference = BF3D89221ECDCC8100E1AC1B /* Typographizer.framework */;
 			productType = "com.apple.product-type.framework";
@@ -152,6 +310,21 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Frank Rausch";
 				TargetAttributes = {
+					275F69AE1FA0D9E0009F9BE7 = {
+						CreatedOnToolsVersion = 9.0;
+						DevelopmentTeam = 9KYFX28EJA;
+						ProvisioningStyle = Automatic;
+					};
+					275F69C41FA0DB3E009F9BE7 = {
+						CreatedOnToolsVersion = 9.0;
+						DevelopmentTeam = 9KYFX28EJA;
+						ProvisioningStyle = Automatic;
+					};
+					275F69D11FA0DB69009F9BE7 = {
+						CreatedOnToolsVersion = 9.0;
+						DevelopmentTeam = 9KYFX28EJA;
+						ProvisioningStyle = Automatic;
+					};
 					BF3D89121ECDCBD000E1AC1B = {
 						CreatedOnToolsVersion = 8.3.2;
 						ProvisioningStyle = Manual;
@@ -176,13 +349,37 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BF3D89211ECDCC8100E1AC1B /* Typographizer */,
+				BF3D89211ECDCC8100E1AC1B /* Typographizer-macOS */,
+				275F69AE1FA0D9E0009F9BE7 /* Typographizer-iOS */,
+				275F69C41FA0DB3E009F9BE7 /* Typographizer-watchOS */,
+				275F69D11FA0DB69009F9BE7 /* Typographizer-tvOS */,
 				BF3D89121ECDCBD000E1AC1B /* TypographizerTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		275F69AD1FA0D9E0009F9BE7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		275F69C31FA0DB3E009F9BE7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		275F69D01FA0DB69009F9BE7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BF3D89111ECDCBD000E1AC1B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -200,6 +397,33 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		275F69AA1FA0D9E0009F9BE7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				275F69BF1FA0DAF2009F9BE7 /* Typographizer.swift in Sources */,
+				275F69BD1FA0DAED009F9BE7 /* String+Typographizer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		275F69C01FA0DB3E009F9BE7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				275F69E81FA0E2A2009F9BE7 /* Typographizer.swift in Sources */,
+				275F69E41FA0E296009F9BE7 /* String+Typographizer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		275F69CD1FA0DB69009F9BE7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				275F69E91FA0E2A3009F9BE7 /* Typographizer.swift in Sources */,
+				275F69E51FA0E297009F9BE7 /* String+Typographizer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BF3D890F1ECDCBD000E1AC1B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -222,12 +446,233 @@
 /* Begin PBXTargetDependency section */
 		BF3D89461ECDCE4700E1AC1B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BF3D89211ECDCC8100E1AC1B /* Typographizer */;
+			target = BF3D89211ECDCC8100E1AC1B /* Typographizer-macOS */;
 			targetProxy = BF3D89451ECDCE4700E1AC1B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		275F69B41FA0D9E0009F9BE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9KYFX28EJA;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "Typographizer-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.raureif.Typographizer;
+				PRODUCT_NAME = Typographizer;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		275F69B51FA0D9E0009F9BE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9KYFX28EJA;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "Typographizer-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.raureif.Typographizer;
+				PRODUCT_NAME = Typographizer;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		275F69CA1FA0DB3E009F9BE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9KYFX28EJA;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "Typographizer-watchOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.raureif.Typographizer;
+				PRODUCT_NAME = Typographizer;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+			};
+			name = Debug;
+		};
+		275F69CB1FA0DB3E009F9BE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9KYFX28EJA;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "Typographizer-watchOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.raureif.Typographizer;
+				PRODUCT_NAME = Typographizer;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+			};
+			name = Release;
+		};
+		275F69D81FA0DB69009F9BE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9KYFX28EJA;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "Typographizer-tvOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.raureif.Typographizer;
+				PRODUCT_NAME = Typographizer;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		275F69D91FA0DB69009F9BE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9KYFX28EJA;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "Typographizer-tvOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.raureif.Typographizer;
+				PRODUCT_NAME = Typographizer;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		2778DECB1E79AFB2001078C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -360,12 +805,12 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Typographizer-macOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.frankrausch.Typographizer;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Typographizer;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -389,12 +834,12 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Typographizer-macOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.frankrausch.Typographizer;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Typographizer;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -406,6 +851,33 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		275F69B61FA0D9E0009F9BE7 /* Build configuration list for PBXNativeTarget "Typographizer-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				275F69B41FA0D9E0009F9BE7 /* Debug */,
+				275F69B51FA0D9E0009F9BE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		275F69CC1FA0DB3E009F9BE7 /* Build configuration list for PBXNativeTarget "Typographizer-watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				275F69CA1FA0DB3E009F9BE7 /* Debug */,
+				275F69CB1FA0DB3E009F9BE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		275F69D71FA0DB69009F9BE7 /* Build configuration list for PBXNativeTarget "Typographizer-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				275F69D81FA0DB69009F9BE7 /* Debug */,
+				275F69D91FA0DB69009F9BE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2778DEB91E79AFB2001078C0 /* Build configuration list for PBXProject "Typographizer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -424,7 +896,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BF3D89391ECDCC8100E1AC1B /* Build configuration list for PBXNativeTarget "Typographizer" */ = {
+		BF3D89391ECDCC8100E1AC1B /* Build configuration list for PBXNativeTarget "Typographizer-macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BF3D893A1ECDCC8100E1AC1B /* Debug */,

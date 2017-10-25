@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "BF3D89211ECDCC8100E1AC1B"
                BuildableName = "Typographizer.framework"
-               BlueprintName = "Typographizer"
+               BlueprintName = "Typographizer-macOS"
                ReferencedContainer = "container:Typographizer.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -40,6 +40,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
@@ -58,7 +59,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BF3D89211ECDCC8100E1AC1B"
             BuildableName = "Typographizer.framework"
-            BlueprintName = "Typographizer"
+            BlueprintName = "Typographizer-macOS"
             ReferencedContainer = "container:Typographizer.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -69,6 +70,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -80,7 +82,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BF3D89211ECDCC8100E1AC1B"
             BuildableName = "Typographizer.framework"
-            BlueprintName = "Typographizer"
+            BlueprintName = "Typographizer-macOS"
             ReferencedContainer = "container:Typographizer.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -98,7 +100,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BF3D89211ECDCC8100E1AC1B"
             BuildableName = "Typographizer.framework"
-            BlueprintName = "Typographizer"
+            BlueprintName = "Typographizer-macOS"
             ReferencedContainer = "container:Typographizer.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
