@@ -168,7 +168,7 @@ struct Typographizer {
             case "´",
                  "`":
                 // FIXME: Replacing a combining accent only works for the very first scalar in a string
-                return Token(.apostrophe, apostrophe)
+                return Token(.apostrophe, self.apostrophe)
             case "\"",
                  "'",
                  "-":
