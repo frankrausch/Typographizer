@@ -4,7 +4,7 @@
 
 Typographizer turns those pesky dumb quotes (`""`/`''`) and apostrophes (`'`) into their beautiful, curly, localized counterparts. Because [good typography uses smart quotes, not dumb quotes](http://smartquotesforsmartpeople.com/) and we should not let [the internet kill smart quotes](https://www.theatlantic.com/technology/archive/2016/12/quotation-mark-wars/511766/). Speaking of smartness: Typographizer is smart enough to skip HTML tags and everything between certain tags (like `<code>` and `<pre>`).
 
-Typographizer has a small footprint, was written in pure Swift 3, and has been tested on macOS, iOS, watchOS, and tvOS.
+Typographizer has a small footprint, was written in pure Swift&nbsp;4, and has been tested on macOS, iOS, watchOS, and tvOS.
 
 I started building Typographizer to typographize Wikipedia articles in my [V&nbsp;for&nbsp;Wiki](http://v-for-wiki.com) app.
 
