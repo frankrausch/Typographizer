@@ -70,12 +70,12 @@ class ViewController: NSViewController, NSTextViewDelegate {
     }
     
     private func refresh() {
-        var s: String = self.beforeTextView.string!
+        var s: String = self.beforeTextView.string
         
         let language = self.languageCodePopUpButton.titleOfSelectedItem ?? "en"
-        let isHTML: Bool = self.htmlCheckbox.state == 1
-        let debug: Bool = self.debugCheckbox.state == 1
-        let measurePerformance: Bool = self.measurePerformanceCheckbox.state == 1
+        let isHTML: Bool = self.htmlCheckbox.state == .on
+        let debug: Bool = self.debugCheckbox.state == .on
+        let measurePerformance: Bool = self.measurePerformanceCheckbox.state == .on
         
         // This is where the magic happens:
         s = s.typographized(language: language, isHTML: isHTML, debug: debug, measurePerformance: measurePerformance)

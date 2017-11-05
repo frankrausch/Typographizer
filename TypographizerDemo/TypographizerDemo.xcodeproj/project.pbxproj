@@ -28,6 +28,27 @@
 			remoteGlobalIDString = BF3D89131ECDCBD000E1AC1B;
 			remoteInfo = TypographizerTests;
 		};
+		2760EA461FAF89C000DAB2F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2743A5271ECF3409007B030B /* Typographizer.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 275F69AF1FA0D9E0009F9BE7;
+			remoteInfo = "Typographizer-iOS";
+		};
+		2760EA481FAF89C000DAB2F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2743A5271ECF3409007B030B /* Typographizer.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 275F69C51FA0DB3E009F9BE7;
+			remoteInfo = "Typographizer-watchOS";
+		};
+		2760EA4A1FAF89C000DAB2F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2743A5271ECF3409007B030B /* Typographizer.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 275F69D21FA0DB69009F9BE7;
+			remoteInfo = "Typographizer-tvOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +76,9 @@
 			isa = PBXGroup;
 			children = (
 				2743A52D1ECF3409007B030B /* Typographizer.framework */,
+				2760EA471FAF89C000DAB2F6 /* Typographizer.framework */,
+				2760EA491FAF89C000DAB2F6 /* Typographizer.framework */,
+				2760EA4B1FAF89C000DAB2F6 /* Typographizer.framework */,
 				2743A52F1ECF3409007B030B /* TypographizerTests.xctest */,
 			);
 			name = Products;
@@ -115,13 +139,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "Frank Rausch";
 				TargetAttributes = {
 					2778DEBD1E79AFB2001078C0 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 9KYFX28EJA;
-						LastSwiftMigration = 0830;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -163,6 +187,27 @@
 			fileType = wrapper.cfbundle;
 			path = TypographizerTests.xctest;
 			remoteRef = 2743A52E1ECF3409007B030B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2760EA471FAF89C000DAB2F6 /* Typographizer.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Typographizer.framework;
+			remoteRef = 2760EA461FAF89C000DAB2F6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2760EA491FAF89C000DAB2F6 /* Typographizer.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Typographizer.framework;
+			remoteRef = 2760EA481FAF89C000DAB2F6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2760EA4B1FAF89C000DAB2F6 /* Typographizer.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Typographizer.framework;
+			remoteRef = 2760EA4A1FAF89C000DAB2F6 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -211,7 +256,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -219,7 +266,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -260,7 +311,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -268,7 +321,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -305,7 +362,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.frankrausch.TypographizerDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -321,7 +379,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.frankrausch.TypographizerDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
