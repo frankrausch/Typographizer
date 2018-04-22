@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "Typographizer"
-  s.version      = "0.1.0"
+  s.version      = "0.3.0"
   s.summary      = "Smart Quotes for Swift Apps."
   s.description  = <<-DESC
                      Typographizer turns those pesky dumb quotes (""/'') and apostrophes (') into their beautiful,
@@ -20,5 +20,5 @@ Pod::Spec.new do |s|
   s.watchos.deployment_target = "2.0"
   s.tvos.deployment_target    = "9.0"
 
-  spec.cocoapods_version = '>= 1.2.0'
+  s.cocoapods_version = '>= 1.2.0'
 end
