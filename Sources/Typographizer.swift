@@ -150,7 +150,7 @@ struct Typographizer {
                 }
         }
 
-        let s = tokens.flatMap({$0.text}).joined()
+        let s = tokens.compactMap({$0.text}).joined()
 
         #if DEBUG
             if let startTime = startTime {
