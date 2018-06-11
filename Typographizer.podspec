@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.authors      = { 'Frank Rausch' => 'git@frankrausch.com' }
 
   s.source       = { :git => "https://github.com/frankrausch/Typographizer.git", :tag => "#{s.version}" }
-  s.source_files = "Typographizer/*.{swift}"
+  s.source_files = "Sources/*.{swift}"
 
   s.ios.deployment_target     = "8.0"
   s.osx.deployment_target     = "10.9"
