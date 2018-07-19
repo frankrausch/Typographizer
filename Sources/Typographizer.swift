@@ -8,14 +8,9 @@
 
 import Foundation
 
-struct Typographizer {
+public struct Typographizer {
 
-    var language: String {
-        didSet {
-            self.refreshLanguage()
-        }
-    }
-
+    private var locale: NSLocale
     var text = "" {
         didSet {
             self.refreshTextIterator()
@@ -30,96 +25,19 @@ struct Typographizer {
     var isMeasurePerformanceEnabled = false
     var isHTML = false
 
-    private var openingDoubleQuote: String = "·"
-    private var closingDoubleQuote: String = "·"
-    private var openingSingleQuote: String = "·"
-    private var closingSingleQuote: String = "·"
-
     private let apostrophe: String = "’"
     private let enDash: String = "–"
     private let tagsToSkip: Set<String> = ["pre", "code", "var", "samp", "kbd", "math", "script", "style"]
     private let openingBracketsSet: Set<UnicodeScalar> = ["(", "["]
 
-    init(language: String, text: String, isHTML: Bool = false, debug: Bool = false, measurePerformance: Bool = false) {
+    init(locale: NSLocale, text: String, isHTML: Bool = false, debug: Bool = false, measurePerformance: Bool = false) {
+        self.locale = locale
         self.text = text
         self.isHTML = isHTML
-        self.language = language
         self.isDebugModeEnabled = debug
         self.isMeasurePerformanceEnabled = measurePerformance
 
-        self.refreshLanguage()
         self.refreshTextIterator()
-    }
-
-    private mutating func refreshLanguage() {
-        switch self.language {
-        case "he":
-            // TODO: Insert proper replacements. 
-            // Fixing dumb quotation marks in Hebrew is tricky,
-            // because a dumb double quotation mark may also be used for gershayim.
-            // See https://en.wikipedia.org/wiki/Gershayim
-            self.openingDoubleQuote = "\""
-            self.closingDoubleQuote = "\""
-            self.openingSingleQuote = "\'"
-            self.closingSingleQuote = "\'"
-        case "cs",
-             "da",
-             "de",
-             "et",
-             "is",
-             "lt",
-             "lv",
-             "sk",
-             "sl":
-            self.openingDoubleQuote = "„"
-            self.closingDoubleQuote = "“"
-            self.openingSingleQuote = "\u{201A}"
-            self.closingSingleQuote = "‘"
-        case "de_CH":
-            self.openingDoubleQuote = "«"
-            self.closingDoubleQuote = "»"
-            self.openingSingleQuote = "‹"
-            self.closingSingleQuote = "›"
-        case "bs",
-             "fi",
-             "sv":
-            self.openingDoubleQuote = "”"
-            self.closingDoubleQuote = "”"
-            self.openingSingleQuote = "’"
-            self.closingSingleQuote = "’"
-        case "fr":
-            self.openingDoubleQuote = "«\u{00A0}"
-            self.closingDoubleQuote = "\u{00A0}»"
-            self.openingSingleQuote = "‹\u{00A0}"
-            self.closingSingleQuote = "\u{00A0}›"
-        case "hu",
-             "pl",
-             "ro":
-            self.openingDoubleQuote = "„"
-            self.closingDoubleQuote = "”"
-            self.openingSingleQuote = "’"
-            self.closingSingleQuote = "’"
-        case "ja":
-            self.openingDoubleQuote = "「"
-            self.closingDoubleQuote = "」"
-            self.openingSingleQuote = "『"
-            self.closingSingleQuote = "』"
-        case "ru",
-             "no",
-             "nn":
-            self.openingDoubleQuote = "«"
-            self.closingDoubleQuote = "»"
-            self.openingSingleQuote = "’"
-            self.closingSingleQuote = "’"
-        case "en",
-             "nl": // contemporary Dutch style
-            fallthrough
-        default:
-            self.openingDoubleQuote = "“"
-            self.closingDoubleQuote = "”"
-            self.openingSingleQuote = "‘"
-            self.closingSingleQuote = "’"
-        }
     }
 
     mutating func refreshTextIterator() {
@@ -280,23 +198,23 @@ struct Typographizer {
             if let previousScalar = self.previousScalar,
                 let nextScalar = nextScalar {
                 if CharacterSet.whitespacesAndNewlines.contains(previousScalar) || self.openingBracketsSet.contains(previousScalar) {
-                    tokenText = self.openingDoubleQuote
+                    tokenText = self.locale.quotationBeginDelimiter
                     fixingResult = .openingDouble
                 } else if CharacterSet.whitespacesAndNewlines.contains(nextScalar) || CharacterSet.punctuationCharacters.contains(nextScalar) {
-                    tokenText = self.closingDoubleQuote
+                    tokenText = self.locale.quotationEndDelimiter
                     fixingResult = .closingDouble
                 } else {
-                    tokenText = self.closingDoubleQuote
+                    tokenText = self.locale.quotationEndDelimiter
                     fixingResult = .closingDouble
                 }
             } else {
                 if self.previousScalar == nil {
                     // The last character of a string:
-                    tokenText = self.openingDoubleQuote
+                    tokenText = self.locale.quotationBeginDelimiter
                     fixingResult = .openingDouble
                 } else {
                     // The first character of a string:
-                    tokenText = self.closingDoubleQuote
+                    tokenText = self.locale.quotationEndDelimiter
                     fixingResult = .closingDouble
                 }
             }
@@ -307,10 +225,10 @@ struct Typographizer {
 
                 if CharacterSet.whitespacesAndNewlines.contains(previousScalar)
                     || CharacterSet.punctuationCharacters.contains(previousScalar) && !CharacterSet.whitespacesAndNewlines.contains(nextScalar) {
-                    tokenText = self.openingSingleQuote
+                    tokenText = self.locale.alternateQuotationBeginDelimiter
                     fixingResult = .openingSingle
                 } else if CharacterSet.whitespacesAndNewlines.contains(nextScalar) || CharacterSet.punctuationCharacters.contains(nextScalar) {
-                    tokenText = self.closingSingleQuote
+                    tokenText = self.locale.alternateQuotationEndDelimiter
                     fixingResult = .closingSingle
                 } else {
                     tokenText = self.apostrophe
@@ -319,11 +237,11 @@ struct Typographizer {
             } else {
                 if self.previousScalar == nil {
                     // The first character of a string:
-                    tokenText = self.openingSingleQuote
+                    tokenText = self.locale.alternateQuotationBeginDelimiter
                     fixingResult = .openingSingle
                 } else {
                     // The last character of a string:
-                    tokenText = self.closingSingleQuote
+                    tokenText = self.locale.alternateQuotationEndDelimiter
                     fixingResult = .closingSingle
                 }
             }
@@ -350,7 +268,6 @@ struct Typographizer {
 }
 
 extension Typographizer {
-    
     
     enum Result: String {
         case openingSingle = "opening-single"
