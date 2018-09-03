@@ -313,11 +313,13 @@
 					275F69AE1FA0D9E0009F9BE7 = {
 						CreatedOnToolsVersion = 9.0;
 						DevelopmentTeam = 9KYFX28EJA;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 					};
 					275F69C41FA0DB3E009F9BE7 = {
 						CreatedOnToolsVersion = 9.0;
 						DevelopmentTeam = 9KYFX28EJA;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 					};
 					275F69D11FA0DB69009F9BE7 = {
@@ -483,7 +485,7 @@
 				PRODUCT_NAME = Typographizer;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -520,7 +522,7 @@
 				PRODUCT_NAME = Typographizer;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -557,7 +559,7 @@
 				PRODUCT_NAME = Typographizer;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -594,7 +596,7 @@
 				PRODUCT_NAME = Typographizer;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
