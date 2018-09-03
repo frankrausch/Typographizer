@@ -32,9 +32,10 @@ class TypographizerTests: XCTestCase {
         XCTAssertEqual(self.string.typographized(language: "sl", isHTML: true), expected)
     }
 
-    func testTypographized_de_CH() {
+    func testTypographized_de_CH_de_LI() {
         let expected = "The ‹quick› brown fox jumps over the «lazy» dog’s ear. This is <code style=\"font: 'SF UI'\">\"HTML\"</code>."
         XCTAssertEqual(self.string.typographized(language: "de_CH", isHTML: true), expected)
+        XCTAssertEqual(self.string.typographized(language: "de_LI", isHTML: true), expected)
     }
 
     func testTypographized_bs_fi_sv() {
