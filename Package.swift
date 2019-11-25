@@ -4,10 +4,10 @@ import PackageDescription
 let package = Package(
     name: "Typographizer",
     platforms: [
-        .iOS(.v8),
-        .macOS("10.9"),
-        .watchOS(.v2),
-        .tvOS(.v9)
+        .iOS(.v10),
+        .macOS("10.10"),
+        .watchOS(.v3),
+        .tvOS(.v10)
     ],
     products: [
         .library(
