@@ -12,13 +12,13 @@ import Typographizer
 
 class ViewController: NSViewController, NSTextViewDelegate {
     
-    @IBOutlet weak var beforeTextView: NSTextView! {
+    @IBOutlet var beforeTextView: NSTextView! {
         didSet {
             beforeTextView.delegate = self
         }
     }
     
-    @IBOutlet weak var afterTextView: NSTextView!
+    @IBOutlet var afterTextView: NSTextView!
     
     @IBOutlet weak var languageCodePopUpButton: NSPopUpButton!
     
