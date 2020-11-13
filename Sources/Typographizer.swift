@@ -196,6 +196,9 @@ struct Typographizer {
     private mutating func htmlToken() throws -> Token {
         var tokenText = "<"
         var tagName = ""
+        var tagNameHasAlreadyBeenDetermined = false
+        var attributeIsOpen = false
+
         loop: while let ch = nextScalar() {
             switch ch {
             case " " where self.tagsToSkip.contains(tagName),
@@ -203,11 +206,19 @@ struct Typographizer {
                 tokenText.unicodeScalars.append(ch)
                 tokenText.append(self.fastForwardToClosingTag(tagName))
                 break loop
-            case ">":
+            case ">" where !attributeIsOpen:
                 tokenText.unicodeScalars.append(ch)
                 break loop
+            case "\"":
+                attributeIsOpen.toggle()
+                tokenText.unicodeScalars.append(ch)
+            case " ":
+                tagNameHasAlreadyBeenDetermined = true
+                tokenText.unicodeScalars.append(ch)
             default:
-                tagName.unicodeScalars.append(ch)
+                if !tagNameHasAlreadyBeenDetermined {
+                    tagName.unicodeScalars.append(ch)
+                }
                 tokenText.unicodeScalars.append(ch)
             }
         }
